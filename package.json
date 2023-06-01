@@ -10,30 +10,36 @@
     "test": "jest",
     "cdk": "cdk"
   },
+  "peerDependencies": {
+    "aws-cdk-lib": "^2.81.0",
+    "constructs": "^10.0.36"
+  },
   "devDependencies": {
-    "@aws-cdk/assert": "^1.79.0",
-    "@types/jest": "^24.0.22",
-    "@types/js-yaml": "^3.12.5",
-    "@types/node": "10.17.5",
-    "aws-cdk": "^1.79.0",
-    "jest": "^24.9.0",
-    "ts-jest": "^24.1.0",
-    "ts-node": "^8.8.1",
-    "typescript": "~3.7.2"
+    "@aws-cdk/assert": "^2.8.0",
+    "@aws-cdk/aws-appsync-alpha": "^2.8.0-alpha.0",
+    "@types/jest": "^27.4.0",
+    "@types/node": "^17.0.8",
+    "aws-cdk-lib": "^2.8.0",
+    "constructs": "^10.0.36",
+    "esbuild": "^0.14.11",
+    "jest": "^27.4.7",
+    "ts-jest": "^27.0.2",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.5.4"
   },
   "dependencies": {
-    "@aws-cdk/aws-codebuild": "^1.79.0",
-    "@aws-cdk/aws-codecommit": "^1.79.0",
-    "@aws-cdk/aws-codepipeline": "^1.79.0",
-    "@aws-cdk/aws-codepipeline-actions": "^1.79.0",
-    "@aws-cdk/aws-ec2": "^1.79.0",
-    "@aws-cdk/aws-ecr": "^1.79.0",
-    "@aws-cdk/aws-eks": "^1.79.0",
-    "@aws-cdk/aws-iam": "^1.79.0",
-    "@aws-cdk/core": "^1.79.0",
+    "@aws-cdk/aws-codebuild": "^1.202.0",
+    "@aws-cdk/aws-codecommit": "^1.202.0",
+    "@aws-cdk/aws-codepipeline": "^1.202.0",
+    "@aws-cdk/aws-codepipeline-actions": "^1.202.0",
+    "@aws-cdk/aws-ec2": "^1.202.0",
+    "@aws-cdk/aws-ecr": "^1.202.0",
+    "@aws-cdk/aws-eks": "^1.202.0",
+    "@aws-cdk/aws-iam": "^1.202.0",
+    "@aws-cdk/core": "^1.202.0",
     "fs": "0.0.1-security",
-    "@types/js-yaml": "^3.12.5",
-    "js-yaml": "^3.14.1",
-    "source-map-support": "^0.5.16"
+    "@types/js-yaml": "^4.0.5",
+    "js-yaml": "^4.1.0",
+    "source-map-support": "^0.5.21"
   }
 }

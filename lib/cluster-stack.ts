@@ -9,7 +9,22 @@ export class ClusterStack extends cdk.Stack {
   constructor(scope: cdk.Construct, id: string, props?: cdk.StackProps) {
     super(scope, id, props);
 
-    const primaryRegion = 'ap-northeast-2';
+    const primaryRegion = 'us-east-1';
+    const clusterAdmin = new iam.Role(this, 'AdminRole', {
+      assumedBy: new iam.AccountRootPrincipal()
+      });
+
+    const cluster = new eks.Cluster(this, 'demogo-cluster', {
+        clusterName: `demogo`,
+        mastersRole: clusterAdmin,
+        version: eks.KubernetesVersion.V1_21,
+        defaultCapacity: 2
+    });
+
+    cluster.addAutoScalingGroupCapacity('spot-group', {
+      instanceType: new ec2.InstanceType('t3.medium'),
+      spotPrice: cdk.Stack.of(this).region==primaryRegion ? '0.248' : '0.192'
+    });
 
   }
 }
